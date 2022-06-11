@@ -26,12 +26,12 @@ app.get("/api", (req, res) => {
 
 app.use("/api/waitlist", waitlistRoute);
 
-const port = process.env.PORT || 6969;
+const port = process.env.PORT || 1980;
 
 app.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {
-    console.log("Server started at port 1980 bby ❤️");
+    console.log(`Server started at port ${port} bby ❤️`);
   }
 });

@@ -16,7 +16,9 @@ const postWaitlist = (req, res) => {
 
   waitlist.save((err, waitlist) => {
     if (err) {
-      return res.status(500).json({ message: "Something went wrong" });
+      return res
+        .status(500)
+        .json({ message: "Something went wrong", error: err });
     } else {
       let transporter = nodemailer.createTransport({
         host: "gofitish.com",
@@ -125,7 +127,9 @@ const postWaitlist = (req, res) => {
         })
         .catch((error) => {
           console.log(error);
-          res.status(500).json({ message: "Something went wrong" });
+          return res
+            .status(500)
+            .json({ message: "Something went wrong", error: error });
         });
       /*return res
         .status(200)
@@ -137,7 +141,9 @@ const postWaitlist = (req, res) => {
 const getWaitlist = (req, res) => {
   waitlistSchema.find({}, (err, waitlist) => {
     if (err) {
-      return res.status(500).json({ message: "Something went wrong" });
+      return res
+        .status(500)
+        .json({ message: "Something went wrong", error: err });
     } else {
       res.status(200).json({ waitlist });
     }
