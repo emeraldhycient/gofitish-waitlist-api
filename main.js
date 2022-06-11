@@ -26,7 +26,7 @@ app.get("/api", (req, res) => {
 
 app.use("/api/waitlist", waitlistRoute);
 
-app.listen(1980, (err) => {
+app.listen(1980 || process.env.PORT, (err) => {
   if (err) {
     console.log(err);
   } else {
