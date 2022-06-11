@@ -102,8 +102,8 @@ const postWaitlist = (req, res) => {
                           width: 100vw;
                       }
                       .logo {
-                          height: 100px;
-                          width: 100px;
+                          height: 60px;
+                          width: 60px;
                           margin: 30px;
                       }
                       .content {
@@ -146,16 +146,16 @@ const postWaitlist = (req, res) => {
                       </p>
           
                       <a href="https://www.linkedin.com/company/gofitish" target="_blank">
-                          <i class="fab fa-linkedin"></i>
-                      </a>
-          
-                      <a href="https://twitter.com/emeraldhycient" target="_blank">
-                          <i class="fab fa-twitter"></i>
-                      </a>
-          
-                      <a href="https://wa.me/2347088639675" target="_blank">
-                          <i class="fab fa-whatsapp"></i>
-                      </a>
+                <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" style="width: 40px" />
+            </a>
+
+            <a href="https://twitter.com/emeraldhycient" target="_blank">
+                <img src="https://img.icons8.com/fluency/48/000000/twitter.png" style="width: 40px" />
+            </a>
+
+            <a href="https://wa.me/2347088639675" target="_blank">
+                <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" style="width: 40px" />
+            </a>
                   </div>
               </div>
               <div class="" style="margin-top: 80px">
