@@ -31,8 +31,8 @@ const postWaitlist = (req, res) => {
       // send mail with defined transport object
       transporter
         .sendMail({
-          from: '"Fred Foo 👻" <foo@example.com>', // sender address
-          to: "bar@example.com, baz@example.com", // list of receivers
+          from: '"igweze hycient 👻" <support@gofitish.com>', // sender address
+          to: `${req.body.email}`, // list of receivers
           subject: "yaaaay welcome to the waitlist 🎉🥂 ✔", // Subject line
           html: "<b>Hello world?</b>", // html body
         })
@@ -45,7 +45,9 @@ const postWaitlist = (req, res) => {
           res.status(500).json({ message: "Something went wrong" });
         });
         */
-      return res.status(200).json({ message: "Waitlist added" });
+      return res
+        .status(200)
+        .json({ message: "yaaaay thank you for joining our waitlist" });
     }
   });
 };
@@ -55,7 +57,7 @@ const getWaitlist = (req, res) => {
     if (err) {
       return res.status(500).json({ message: "Something went wrong" });
     } else {
-      res.status(200).json(waitlist);
+      res.status(200).json({ waitlist });
     }
   });
 };

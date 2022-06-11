@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+var cors = require("cors");
 const app = express();
 
 const mongodb_url = process.env.MONGODB_URL;
@@ -17,6 +18,7 @@ mongoose
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/api", (req, res) => {
   res.send("waitlist in totality");
